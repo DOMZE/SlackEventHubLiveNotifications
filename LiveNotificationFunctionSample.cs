@@ -19,7 +19,7 @@ namespace LiveNotificationFunction
         [FunctionName("LiveNotificationFunction")]
         public static async Task Run(
             [EventHubTrigger("monitoring", Connection = "EventHubConnectionAppSetting")] EventData[] events,
-            [Slack(Username = "KeyvaultGuardian", Channel = "#devtest")] IAsyncCollector<SlackMessage> slackMessages,
+            [Slack(Username = "KeyvaultGuardian")] IAsyncCollector<SlackMessage> slackMessages,
             ILogger log
         )
         {
